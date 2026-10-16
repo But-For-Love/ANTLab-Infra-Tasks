@@ -1,0 +1,60 @@
+{
+  "config_id": "baseline",
+  "params": "-ngl 99 -c 16384 -np 4 -cb -fa off -ctk f16 -ctv f16 -b 2048 -ub 512 -t 8",
+  "ctx_total": 16384,
+  "n_slots": 4,
+  "n_ctx_slot": 4096,
+  "probes": [
+    {
+      "target_tokens": 1024,
+      "measured_input_tokens": 1063,
+      "ok": true,
+      "ttft_ms": 542.0119519999389,
+      "total_ms": 740.4419659999348,
+      "prompt_tokens": 1067,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 2048,
+      "measured_input_tokens": 2032,
+      "ok": true,
+      "ttft_ms": 409.5491479999964,
+      "total_ms": 593.5314859999608,
+      "prompt_tokens": 2036,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 3072,
+      "measured_input_tokens": 3020,
+      "ok": true,
+      "ttft_ms": 463.1256320000148,
+      "total_ms": 644.4335019999698,
+      "prompt_tokens": 3024,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 4096,
+      "measured_input_tokens": 4008,
+      "ok": true,
+      "ttft_ms": 502.34811500001797,
+      "total_ms": 626.7797389999714,
+      "prompt_tokens": 4012,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 5120,
+      "measured_input_tokens": 4996,
+      "ok": false,
+      "ttft_ms": null,
+      "total_ms": 11.969762000035189,
+      "prompt_tokens": null,
+      "error_type": "http_error",
+      "error_message": "HTTP 400: {\"error\":{\"code\":400,\"message\":\"request (5000 tokens) exceeds the available context size (4096 tokens), try increasing it\",\"type\":\"exceed_context_size_error\",\"n_prompt_tokens\":5000,\"n_ctx\":4"
+    }
+  ],
+  "max_ok_input_tokens": 4008
+}

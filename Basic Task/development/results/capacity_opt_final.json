@@ -1,0 +1,100 @@
+{
+  "config_id": "opt_final",
+  "params": "-ngl 99 -c 32768 -np 4 -cb -fa on -ctk q8_0 -ctv q8_0 -b 2048 -ub 512 -t 8",
+  "ctx_total": 32768,
+  "n_slots": 4,
+  "n_ctx_slot": 8192,
+  "probes": [
+    {
+      "target_tokens": 1024,
+      "measured_input_tokens": 1063,
+      "ok": true,
+      "ttft_ms": 344.7721919999367,
+      "total_ms": 522.019820999958,
+      "prompt_tokens": 1067,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 2048,
+      "measured_input_tokens": 2032,
+      "ok": true,
+      "ttft_ms": 301.9619330000296,
+      "total_ms": 495.57607400004144,
+      "prompt_tokens": 2036,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 3072,
+      "measured_input_tokens": 3020,
+      "ok": true,
+      "ttft_ms": 310.062855999945,
+      "total_ms": 490.99413499993716,
+      "prompt_tokens": 3024,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 4096,
+      "measured_input_tokens": 4008,
+      "ok": true,
+      "ttft_ms": 324.8822589999918,
+      "total_ms": 455.70055100006357,
+      "prompt_tokens": 4012,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 5120,
+      "measured_input_tokens": 4996,
+      "ok": true,
+      "ttft_ms": 333.140788000037,
+      "total_ms": 530.3222210000058,
+      "prompt_tokens": 5000,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 6144,
+      "measured_input_tokens": 5965,
+      "ok": true,
+      "ttft_ms": 353.19568700003856,
+      "total_ms": 554.7200180000118,
+      "prompt_tokens": 5969,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 7168,
+      "measured_input_tokens": 6953,
+      "ok": true,
+      "ttft_ms": 361.8827569999894,
+      "total_ms": 566.8104549999953,
+      "prompt_tokens": 6957,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 8192,
+      "measured_input_tokens": 7941,
+      "ok": true,
+      "ttft_ms": 393.85023699992416,
+      "total_ms": 528.9989959999275,
+      "prompt_tokens": 7945,
+      "error_type": null,
+      "error_message": ""
+    },
+    {
+      "target_tokens": 10240,
+      "measured_input_tokens": 9898,
+      "ok": false,
+      "ttft_ms": null,
+      "total_ms": 33.11874300004547,
+      "prompt_tokens": null,
+      "error_type": "http_error",
+      "error_message": "HTTP 400: {\"error\":{\"code\":400,\"message\":\"request (9902 tokens) exceeds the available context size (8192 tokens), try increasing it\",\"type\":\"exceed_context_size_error\",\"n_prompt_tokens\":9902,\"n_ctx\":8"
+    }
+  ],
+  "max_ok_input_tokens": 7941
+}
