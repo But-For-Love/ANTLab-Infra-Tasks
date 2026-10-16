@@ -1,0 +1,62 @@
+已生成：/mnt/d/albeni/ANTLab-Infra-Tasks/Basic Task/development/results/report_tables.md
+# 报告数据表（由原始记录自动生成）
+
+生成来源：`results/runs/*/summary.json`、`results/runs/*/requests.jsonl`、`results/kv_capacity.json`、`results/capacity_*.json`、`results/env.json`。
+重新生成：`python3 run.py tables`
+
+## 表 0　环境与模型信息
+
+| 项目 | 值 |
+| --- | --- |
+| 采集时间 | 2026-10-16T13:15:35+0800 |
+| Windows/WSL | Linux But-For-Love 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux |
+| Python | 3.12.3 |
+| GPU | NVIDIA GeForce RTX 5070 Ti Laptop GPU |
+| GPU 显存总量 | 12227 MiB |
+| 驱动版本 | 596.36 |
+| CUDA (nvcc) | Cuda compilation tools, release 13.2, V13.2.86 / Build cuda_13.2.r13.2/compiler. |
+| CMake | cmake version 3.28.3 |
+| GCC | gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0 |
+| llama.cpp commit | 005a1e127a84cc75bb66be11b43e4f0773564e53 |
+| 模型文件 | /root/models/Qwen3-8B-Q4_K_M.gguf |
+| 模型大小（字节） | 5027783488 |
+| 模型 SHA256 | `d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785` |
+
+## 表 1　KV 容量口径
+
+| 配置 | 服务参数 | KV 类型 K/V | slot 数 | KV 分配 | 每 slot 可用容量（token） | 配置总容量（token） | KV 日志实测（MiB） | 按架构推算（MiB） | 模型权重（MiB） | 计算缓冲（MiB） | GPU 显存占用（MiB） |
+| --- | --- | --- | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline | `-ngl 99 -c 16384 -np 4 -cb -fa off -ctk f16 -ctv f16 -b 2048 -ub 512 -t 8 -lv 5` | f16 / f16 | 4 | 4/4 | 4096 | 16384 | 2304.0 | 2304.0 | 4455.3 | 308.0 | 10289 |
+| opt_fa | `-ngl 99 -c 16384 -np 4 -cb -fa on -ctk f16 -ctv f16 -b 2048 -ub 512 -t 8 -lv 5` | f16 / f16 | 4 | 4/4 | 4096 | 16384 | 2304.0 | 2304.0 | 4455.3 | 108.0 | 10087 |
+| opt_final | `-ngl 99 -c 32768 -np 4 -cb -fa on -ctk q8_0 -ctv q8_0 -b 2048 -ub 512 -t 8 -lv 5` | q8_0 / q8_0 | 4 | 4/4 | 8192 | 32768 | 2448.0 | 2448.0 | 4455.3 | 176.1 | 10303 |
+| opt_kv | `-ngl 99 -c 16384 -np 4 -cb -fa on -ctk q8_0 -ctv q8_0 -b 2048 -ub 512 -t 8 -lv 5` | q8_0 / q8_0 | 4 | 4/4 | 4096 | 16384 | 1224.0 | 1224.0 | 4455.3 | 108.1 | 9011 |
+
+## 表 2　容量边界验证（实测可用容量）
+
+**baseline**：`-ngl 99 -c 16384 -np 4 -cb -fa off -ctk f16 -ctv f16 -b 2048 -ub 512 -t 8` → 每 slot 配置 4096 token，**实测最大可用输入 4008 token**
+
+| 目标输入（token） | 实测输入（token） | 结果 | 错误 |
+| ---: | ---: | --- | --- |
+| 1024 | 1063 | 成功 |  |
+| 2048 | 2032 | 成功 |  |
+| 3072 | 3020 | 成功 |  |
+| 4096 | 4008 | 成功 |  |
+| 5120 | 4996 | **失败** | HTTP 400: {"error":{"code":400,"message":"request (5000 tokens) exceeds the available context size (4096 tokens), try in |
+
+**opt_final**：`-ngl 99 -c 32768 -np 4 -cb -fa on -ctk q8_0 -ctv q8_0 -b 2048 -ub 512 -t 8` → 每 slot 配置 8192 token，**实测最大可用输入 7941 token**
+
+| 目标输入（token） | 实测输入（token） | 结果 | 错误 |
+| ---: | ---: | --- | --- |
+| 1024 | 1063 | 成功 |  |
+| 2048 | 2032 | 成功 |  |
+| 3072 | 3020 | 成功 |  |
+| 4096 | 4008 | 成功 |  |
+| 5120 | 4996 | 成功 |  |
+| 6144 | 5965 | 成功 |  |
+| 7168 | 6953 | 成功 |  |
+| 8192 | 7941 | 成功 |  |
+| 10240 | 9898 | **失败** | HTTP 400: {"error":{"code":400,"message":"request (9902 tokens) exceeds the available context size (8192 tokens), try in |
+
+## 表 3　基线与优化结果（多轮聚合）
+
+| 服务配置 | 并发 | 轮数 | 成功/总请求 | TTFT 中位 (ms) | TTFT P95 (ms) | TPOT 

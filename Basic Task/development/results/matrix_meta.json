@@ -1,0 +1,124 @@
+{
+  "hardware": {
+    "hostname": "But-For-Love",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "gpu_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "gpu_memory_total": "12227 MiB",
+    "gpu_memory_used": "3045 MiB",
+    "driver_version": "596.36",
+    "gpu_temperature_c": "67",
+    "uname": "Linux But-For-Love 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "llama_version": {
+    "raw": ""
+  },
+  "llama_commit": "005a1e127a84cc75bb66be11b43e4f0773564e53",
+  "system_message_sha256": "d6bd32b5a2248f0bb07ca0cc27befb1d93f5db1214b4bea423bdf71c413081ff",
+  "task_manifest": [
+    {
+      "prompt_id": "C01",
+      "title": "代码审查",
+      "kind": "源文件",
+      "file_name": "编程输入03-ticket_stats.py",
+      "file_sha256": "564e07fbb2c242edb905ed6ad8b7ee8e00832eacd15658bf03f2044ad546486f",
+      "input_chars": 4296,
+      "task_sha256": "2326c4c2114fd8ef79565130e52edc9a0da99ed9d6a6c549f483b0178a14b4dd"
+    },
+    {
+      "prompt_id": "C02",
+      "title": "代码修复与测试",
+      "kind": "源文件",
+      "file_name": "编程输入03-ticket_stats.py",
+      "file_sha256": "564e07fbb2c242edb905ed6ad8b7ee8e00832eacd15658bf03f2044ad546486f",
+      "input_chars": 4320,
+      "task_sha256": "26c87d3f59e200795297a21ada81f0634231dc98815c7974707755022ac51f69"
+    },
+    {
+      "prompt_id": "D01",
+      "title": "会议与进度整理",
+      "kind": "文档",
+      "file_name": "办公输入01-项目会议与进度资料.md",
+      "file_sha256": "1f3e530c367170d2293ca20bf7fb1c08e7a1dbfac63483c4fb48becd678e69c1",
+      "input_chars": 3358,
+      "task_sha256": "7f8692264d1c517f3713864b7da4fb4baa063fe4c3f115b92747bf7498edd20f"
+    },
+    {
+      "prompt_id": "D02",
+      "title": "客户沟通",
+      "kind": "文档",
+      "file_name": "办公输入01-项目会议与进度资料.md",
+      "file_sha256": "1f3e530c367170d2293ca20bf7fb1c08e7a1dbfac63483c4fb48becd678e69c1",
+      "input_chars": 3343,
+      "task_sha256": "2abe1460922fdca887ac1e2e524ca2a1dfd93e8d0154f7b31c35f27b9d7256c8"
+    },
+    {
+      "prompt_id": "D03",
+      "title": "制度问答",
+      "kind": "文档",
+      "file_name": "办公输入02-工作室内部管理制度.md",
+      "file_sha256": "f9a6cb989c4556fc8a925dea5945216b694684d26987754494ca7f09f3225da3",
+      "input_chars": 2947,
+      "task_sha256": "a639d90bb8a31de893c3c40837234220af15bd64829baffe8e9b9f9d5d692ce1"
+    },
+    {
+      "prompt_id": "D04",
+      "title": "入职清单",
+      "kind": "文档",
+      "file_name": "办公输入02-工作室内部管理制度.md",
+      "file_sha256": "f9a6cb989c4556fc8a925dea5945216b694684d26987754494ca7f09f3225da3",
+      "input_chars": 2912,
+      "task_sha256": "ef2ffa58a464464d25588d86812d8f3430bec676f57e86346c6a9bdee8d55d59"
+    },
+    {
+      "prompt_id": "P01",
+      "title": "办公邮件",
+      "kind": "纯提示词",
+      "file_name": null,
+      "file_sha256": null,
+      "input_chars": 210,
+      "task_sha256": "ca03ed9ff189934d941299d38d107ecc4a33742b864786a3b8544aa5d45ccdd8"
+    },
+    {
+      "prompt_id": "P02",
+      "title": "工作计划",
+      "kind": "纯提示词",
+      "file_name": null,
+      "file_sha256": null,
+      "input_chars": 239,
+      "task_sha256": "4fb31322b2271a5ad504b3a4b628bf50a3066186752fe4f2ddde59129fedaa30"
+    },
+    {
+      "prompt_id": "P03",
+      "title": "编程实现",
+      "kind": "纯提示词",
+      "file_name": null,
+      "file_sha256": null,
+      "input_chars": 296,
+      "task_sha256": "f348e76f934b91de1d4f870405868d5716a92d5312a12b91c38c4e2a080762f0"
+    },
+    {
+      "prompt_id": "P04",
+      "title": "程序设计",
+      "kind": "纯提示词",
+      "file_name": null,
+      "file_sha256": null,
+      "input_chars": 224,
+      "task_sha256": "81cf9ec673536eef30f103c9eb15739cde383b10e48f0d8ca99312707627a001"
+    }
+  ],
+  "started_at": "2026-10-16T13:10:24",
+  "plan": [
+    {
+      "service_config": "opt_fa",
+      "loads": [
+        "bench_c4"
+      ]
+    },
+    {
+      "service_config": "opt_kv",
+      "loads": [
+        "bench_c4"
+      ]
+    }
+  ]
+}

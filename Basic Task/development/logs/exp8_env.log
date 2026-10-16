@@ -1,0 +1,5 @@
+模型 /root/models/Qwen3-8B-Q4_K_M.gguf
+SHA256 = d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785
+大小   = 5027783488
+GPU    = NVIDIA GeForce RTX 5070 Ti Laptop GPU
+已写入 results/env.json

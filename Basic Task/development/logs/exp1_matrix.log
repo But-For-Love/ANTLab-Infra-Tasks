@@ -1,0 +1,10 @@
+
+===== 服务配置 baseline =====
+  bench_c1: 成功 30/30 TTFT中位 55ms 解码 81.2 tok/s
+  bench_c4: 成功 30/30 TTFT中位 633ms 解码 41.5 tok/s
+
+===== 服务配置 opt_final =====
+  bench_c1: 成功 30/30 TTFT中位 51ms 解码 83.2 tok/s
+  bench_c4: 成功 30/30 TTFT中位 514ms 解码 47.5 tok/s
+
+矩阵完成

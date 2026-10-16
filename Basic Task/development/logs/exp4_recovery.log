@@ -1,0 +1,9 @@
+恢复测试运行编号 R20261016-131439-opt_final-recovery
+  [2026-10-16T13:14:41+0800] service_ready {'pid': 1713}
+  [2026-10-16T13:14:42+0800] request_before {'ok': True, 'ttft_ms': 81.46412500002498, 'error': None}
+  [2026-10-16T13:14:42+0800] kill_service 
+  [2026-10-16T13:14:46+0800] detect_after_kill {'service_ready': False}
+  [2026-10-16T13:14:49+0800] request_during_outage {'ok': False, 'error_type': 'http_error', 'status': 'failed'}
+  [2026-10-16T13:14:50+0800] service_restarted {'ready': True, 'recovery_s': 1.24, 'pid': 1754}
+  [2026-10-16T13:14:51+0800] request_after_recovery {'ok': True, 'ttft_ms': 84.96376699997654}
+恢复耗时 1.24s；前=True 中断中=False 恢复后=True

@@ -1,0 +1,8 @@
+配置 baseline: -c 16384, -np 4 → 每 slot 上下文 4096 token
+  目标   1024 → 实测输入   1063 成功  
+  目标   2048 → 实测输入   2032 成功  
+  目标   3072 → 实测输入   3020 成功  
+  目标   4096 → 实测输入   4008 成功  
+  目标   5120 → 实测输入   4996 失败 http_error HTTP 400: {"error":{"code":400,"message":"request (5000 tokens) exceeds the available cont
+  已达到上下文上限，停止加长
+实测最大可用输入 token = 4008；结果写入 capacity_baseline.json

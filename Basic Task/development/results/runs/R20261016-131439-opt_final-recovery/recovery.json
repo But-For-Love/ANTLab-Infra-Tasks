@@ -1,0 +1,57 @@
+{
+  "run_id": "R20261016-131439-opt_final-recovery",
+  "service_config": "opt_final",
+  "timeline": [
+    {
+      "event": "service_ready",
+      "at": "2026-10-16T13:14:41+0800",
+      "pid": 1713
+    },
+    {
+      "event": "request_before",
+      "at": "2026-10-16T13:14:42+0800",
+      "ok": true,
+      "ttft_ms": 81.46412500002498,
+      "error": null
+    },
+    {
+      "event": "kill_service",
+      "at": "2026-10-16T13:14:42+0800"
+    },
+    {
+      "event": "detect_after_kill",
+      "at": "2026-10-16T13:14:46+0800",
+      "service_ready": false
+    },
+    {
+      "event": "request_during_outage",
+      "at": "2026-10-16T13:14:49+0800",
+      "ok": false,
+      "error_type": "http_error",
+      "status": "failed"
+    },
+    {
+      "event": "service_restarted",
+      "at": "2026-10-16T13:14:50+0800",
+      "ready": true,
+      "recovery_s": 1.24,
+      "pid": 1754
+    },
+    {
+      "event": "request_after_recovery",
+      "at": "2026-10-16T13:14:51+0800",
+      "ok": true,
+      "ttft_ms": 84.96376699997654
+    }
+  ],
+  "recovery_s": 1.24,
+  "before_ok": true,
+  "during_ok": false,
+  "after_ok": true,
+  "after_content_head": "**邮件主题：关于内部演示版本延期的通知**\n\n尊敬的客户您好：\n\n感谢您对我们项目的信任与支持。由于接口联调工作尚未完成，原定于本周五交付的内部演示版本将延期至下周二（具体时间为[请填写具体时间]）进行。正式交付日期仍按",
+  "handling": {
+    "waiting_requests": "提交前检测到服务中断即标记 cancelled，不发送",
+    "sent_requests": "已发送请求在中断时归为 failed/service_unavailable",
+    "failed_requests": "按 max_retries 有限次重试，按逻辑请求去重计数"
+  }
+}
