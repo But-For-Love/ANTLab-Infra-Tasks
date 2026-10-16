@@ -1,0 +1,16 @@
+{
+  "load_id": "bench_c1",
+  "description": "固定负载：10 个规定任务各 1 次，单并发，3 轮重复。输出上限 192 token，用于性能对比（输出质量另由 quality 负载采集）。",
+  "prompt_ids": ["P01", "P02", "P03", "P04", "D01", "D02", "D03", "D04", "C01", "C02"],
+  "concurrency": 1,
+  "repeats": 3,
+  "output_limit": 192,
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "seed": 42,
+  "arrival_mode": "fixed_interval",
+  "arrival_interval_ms": 0,
+  "request_timeout_s": 300,
+  "max_retries": 1
+}

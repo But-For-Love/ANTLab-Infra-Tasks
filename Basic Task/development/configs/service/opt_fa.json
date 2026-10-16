@@ -1,0 +1,19 @@
+{
+  "config_id": "opt_fa",
+  "description": "优化 1：在 baseline 基础上仅启用 Flash Attention（-fa on），KV 仍为 f16，上下文与 slot 数不变。用于单独衡量 Flash Attention 的作用。",
+  "host": "127.0.0.1",
+  "port": 8080,
+  "model_path": "~/models/Qwen3-8B-Q4_K_M.gguf",
+  "extra_args": [
+    "-ngl", "99",
+    "-c", "16384",
+    "-np", "4",
+    "-cb",
+    "-fa", "on",
+    "-ctk", "f16",
+    "-ctv", "f16",
+    "-b", "2048",
+    "-ub", "512",
+    "-t", "8"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "config_id": "opt_final",
+  "description": "最终优化配置：Flash Attention + KV q8_0 + 上下文 32768（每 slot 8192，是基线的 2 倍），slot 数保持 4。利用 KV 量化释放的显存扩大上下文容量，解决基线在最长输入任务上的上下文不足问题。",
+  "host": "127.0.0.1",
+  "port": 8080,
+  "model_path": "~/models/Qwen3-8B-Q4_K_M.gguf",
+  "extra_args": [
+    "-ngl", "99",
+    "-c", "32768",
+    "-np", "4",
+    "-cb",
+    "-fa", "on",
+    "-ctk", "q8_0",
+    "-ctv", "q8_0",
+    "-b", "2048",
+    "-ub", "512",
+    "-t", "8"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "scenario": {
+    "name": "澄禾工作室（虚构）本地大模型服务",
+    "headcount": 8,
+    "users": "同一工作室 8 名成员，同时在线 1—4 人",
+    "needs": [
+      "邮件与会议纪要整理、制度与条款问答（办公任务）",
+      "代码审查、缺陷定位与修复、脚本编写（编程任务）"
+    ],
+    "request_mix": {
+      "办公任务": "6/10（P01、P02、D01、D02、D03、D04）",
+      "编程任务": "4/10（P03、P04、C01、C02）"
+    },
+    "request_profile": {
+      "纯提示词": "输入短（数百 token），输出 200—800 token",
+      "关联文件": "输入约 1.5k—2.5k token，输出 400—3000 token"
+    },
+    "arrival": "成员在需要时手动发起；测试中用固定列表组织负载，保证可重复",
+    "concurrency_range": "1—4（任务要求上限 10）",
+    "optimization_goal": "在多并发下降低 TTFT 与完成耗时，同时提升 KV 容量（token）并控制显存占用"
+  },
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU, 12226 MiB",
+    "runtime": "WSL2 Ubuntu 24.04",
+    "engine": "llama.cpp / llama-server（源码编译，CUDA 后端，sm_120）",
+    "model": "Qwen3-8B-Q4_K_M.gguf",
+    "notes": "模型全部计算层与 KV 缓存驻留 GPU；通过 --cache-ram 0 关闭主机 RAM prompt cache"
+  }
+}

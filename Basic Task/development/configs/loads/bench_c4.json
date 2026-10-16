@@ -1,0 +1,16 @@
+{
+  "load_id": "bench_c4",
+  "description": "固定负载：10 个规定任务，4 路并发同时提交（不超过 10 并发的要求），3 轮重复。输出上限 192 token。与 bench_c1 使用相同输入与输出配置，仅并发数不同。",
+  "prompt_ids": ["P01", "P02", "P03", "P04", "D01", "D02", "D03", "D04", "C01", "C02"],
+  "concurrency": 4,
+  "repeats": 3,
+  "output_limit": 192,
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "seed": 42,
+  "arrival_mode": "simultaneous",
+  "arrival_interval_ms": 0,
+  "request_timeout_s": 300,
+  "max_retries": 1
+}
