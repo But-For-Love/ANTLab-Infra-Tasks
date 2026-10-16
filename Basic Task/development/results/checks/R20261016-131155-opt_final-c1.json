@@ -1,0 +1,389 @@
+{
+  "run_id": "R20261016-131155-opt_final-c1",
+  "checks": [
+    {
+      "prompt_id": "D01",
+      "check": "使用最新会议决定的演示日期（10-20）",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D01",
+      "check": "保留正式的交付日期（10-23）",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D01",
+      "check": "旧演示日期仅作为变更前背景出现",
+      "passed": true,
+      "detail": "已标注为原定/变更"
+    },
+    {
+      "prompt_id": "D01",
+      "check": "包含行动项或负责人信息",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D01",
+      "check": "标注待确认事项",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D02",
+      "check": "使用最新会议决定的演示日期（10-20）",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D02",
+      "check": "保留正式的交付日期（10-23）",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D02",
+      "check": "旧演示日期仅作为变更前背景出现",
+      "passed": true,
+      "detail": "已标注为原定/变更"
+    },
+    {
+      "prompt_id": "D02",
+      "check": "包含行动项或负责人信息",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D02",
+      "check": "标注待确认事项",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D03",
+      "check": "引用条款 B03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D03",
+      "check": "引用条款 B05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D03",
+      "check": "引用条款 C01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D03",
+      "check": "引用条款 C02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D03",
+      "check": "引用条款 C03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D03",
+      "check": "引用条款 D03",
+      "passed": false,
+      "detail": "未引用"
+    },
+    {
+      "prompt_id": "D03",
+      "check": "引用条款 D05",
+      "passed": false,
+      "detail": "未引用"
+    },
+    {
+      "prompt_id": "D03",
+      "check": "覆盖客户验收周例外流程（B05）",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D03",
+      "check": "覆盖远程处理客户资料的 VPN 要求（D05）",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D04",
+      "check": "引用条款 A01",
+      "passed": false,
+      "detail": "未引用"
+    },
+    {
+      "prompt_id": "D04",
+      "check": "引用条款 A02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D04",
+      "check": "引用条款 A03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D04",
+      "check": "引用条款 A04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D04",
+      "check": "引用条款 C03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D04",
+      "check": "引用条款 D03",
+      "passed": false,
+      "detail": "未引用"
+    },
+    {
+      "prompt_id": "D04",
+      "check": "单列接触客户资料前置事项",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "D04",
+      "check": "覆盖地点或设备变化的补办手续",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C01",
+      "check": "定位缺陷：空输入除零",
+      "passed": false,
+      "detail": "输出未提及该缺陷"
+    },
+    {
+      "prompt_id": "C01",
+      "check": "定位缺陷：未按 id 去重",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C01",
+      "check": "定位缺陷：owner 未规范化",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C01",
+      "check": "定位缺陷：status 未规范化/未知状态崩溃",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C01",
+      "check": "定位缺陷：平均耗时口径错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C01",
+      "check": "定位缺陷：未关闭工单计入耗时",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C01",
+      "check": "定位缺陷：时间解析无异常处理",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C01",
+      "check": "给出最小复现输入",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C02",
+      "check": "输出包含可提取的 Python 代码",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C02",
+      "check": "生成代码可执行",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C02",
+      "check": "保留主要函数 summarize_tickets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C02",
+      "check": "空输入不崩溃且返回 total=0",
+      "passed": true,
+      "detail": "实际 0"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "空输入 average_closed_hours 为 None",
+      "passed": true,
+      "detail": "实际 None"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "缺 owner 键不崩溃",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C02",
+      "check": "缺 status 键不崩溃",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C02",
+      "check": "未知状态不崩溃",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C02",
+      "check": "无效时间不崩溃",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "prompt_id": "C02",
+      "check": "owner=None 归入 unassigned",
+      "passed": true,
+      "detail": "实际 {'unassigned': {'total': 1, 'open': 1, 'processing': 0, 'closed': 0, 'other': 0}}"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "owner 为空白归入 unassigned",
+      "passed": true,
+      "detail": "实际 {'unassigned': {'total': 1, 'open': 1, 'processing': 0, 'closed': 0, 'other': 0}}"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "owner 去首尾空格",
+      "passed": true,
+      "detail": "实际 {'Chen': {'total': 1, 'open': 1, 'processing': 0, 'closed': 0, 'other': 0}}"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "状态忽略大小写与空格（Closed→closed）",
+      "passed": true,
+      "detail": "实际 {'open': 0, 'processing': 0, 'closed': 1, 'other': 0}"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "未知状态计入 other",
+      "passed": true,
+      "detail": "实际 {'open': 0, 'processing': 0, 'closed': 0, 'other': 1}"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "同 id 只统计第一条（total=1）",
+      "passed": true,
+      "detail": "实际 1"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "空白 id 跳过（total=0）",
+      "passed": true,
+      "detail": "实际 0"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "无有效耗时工单 average 为 None",
+      "passed": false,
+      "detail": "实际 0.0"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "样例去重后 total=4",
+      "passed": true,
+      "detail": "实际 4"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "样例 closed=2",
+      "passed": true,
+      "detail": "实际 2"
+    },
+    {
+      "prompt_id": "C02",
+      "check": "样例平均耗时为 3.38（保留两位小数）",
+      "passed": false,
+      "detail": "实际 1.69"
+    }
+  ],
+  "c02_detail": {
+    "code_found": true,
+    "code_chars": 4485,
+    "cases": {
+      "empty": "ok",
+      "missing_owner_key": "ok",
+      "missing_status_key": "ok",
+      "owner_none": "ok",
+      "owner_blank": "ok",
+      "owner_spaces": "ok",
+      "status_case_space": "ok",
+      "status_unknown": "ok",
+      "dup_id": "ok",
+      "blank_id": "ok",
+      "unclosed_with_closed_at": "ok",
+      "closed_missing_time": "ok",
+      "invalid_time": "ok",
+      "naive_time": "ok",
+      "closed_before_created": "TypeError: can't compare offset-naive and offset-aware datetimes",
+      "cross_tz": "ok",
+      "no_valid_hours": "ok",
+      "sample_dedup": "ok"
+    }
+  },
+  "summary": {
+    "total_checks": 55,
+    "passed": 47,
+    "by_prompt": {
+      "D01": {
+        "passed": 5,
+        "total": 5
+      },
+      "D02": {
+        "passed": 5,
+        "total": 5
+      },
+      "D03": {
+        "passed": 6,
+        "total": 9
+      },
+      "D04": {
+        "passed": 6,
+        "total": 8
+      },
+      "C01": {
+        "passed": 7,
+        "total": 8
+      },
+      "C02": {
+        "passed": 18,
+        "total": 20
+      }
+    }
+  }
+}

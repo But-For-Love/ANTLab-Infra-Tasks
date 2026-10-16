@@ -1,0 +1,169 @@
+{
+  "run_id": "R20261016-131155-opt_final-c1",
+  "service_config": "opt_final",
+  "load_id": "quality",
+  "concurrency": 1,
+  "repeats": 1,
+  "output_limit": 3072,
+  "overall": {
+    "total_requests": 10,
+    "by_status": {
+      "success": 10
+    },
+    "success": 10,
+    "success_rate": 1.0,
+    "retried_requests": 0,
+    "ttft_ms": {
+      "mean": 206.35051379999823,
+      "median": 50.66141500003596,
+      "p95": 655.4371319999746,
+      "min": 46.71495799999548,
+      "max": 655.4371319999746
+    },
+    "total_ms": {
+      "mean": 16381.06581699999,
+      "median": 13640.641173000005,
+      "p95": 39070.06001100001
+    },
+    "tpot_server_ms": {
+      "mean": 12.160990390012646,
+      "median": 12.44754805194805
+    },
+    "tpot_client_ms": {
+      "mean": 12.17641511680929,
+      "median": 12.463948045513641
+    },
+    "tokens": {
+      "prompt_total": 12230,
+      "cached_total": 5755,
+      "output_total": 13099,
+      "output_mean": 1309.9
+    },
+    "throughput": {
+      "decode_tokens_per_s": 80.98429870926583,
+      "requests_per_s": 0.06104520481979162,
+      "wall_tokens_per_s": 79.96311379344505
+    },
+    "wall_clock_s": 163.81303051600008
+  },
+  "rounds": [
+    {
+      "total_requests": 10,
+      "by_status": {
+        "success": 10
+      },
+      "success": 10,
+      "success_rate": 1.0,
+      "retried_requests": 0,
+      "ttft_ms": {
+        "mean": 206.35051379999823,
+        "median": 50.66141500003596,
+        "p95": 655.4371319999746,
+        "min": 46.71495799999548,
+        "max": 655.4371319999746
+      },
+      "total_ms": {
+        "mean": 16381.06581699999,
+        "median": 13640.641173000005,
+        "p95": 39070.06001100001
+      },
+      "tpot_server_ms": {
+        "mean": 12.160990390012646,
+        "median": 12.44754805194805
+      },
+      "tpot_client_ms": {
+        "mean": 12.17641511680929,
+        "median": 12.463948045513641
+      },
+      "tokens": {
+        "prompt_total": 12230,
+        "cached_total": 5755,
+        "output_total": 13099,
+        "output_mean": 1309.9
+      },
+      "throughput": {
+        "decode_tokens_per_s": 80.98429870926583,
+        "requests_per_s": 0.06104520481979162,
+        "wall_tokens_per_s": 79.96311379344505
+      },
+      "wall_clock_s": 163.81303051600008,
+      "round": 1
+    }
+  ],
+  "aggregate": {
+    "rounds": 1,
+    "success_rate": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "spread_pct": 0.0,
+      "n_rounds": 1
+    },
+    "ttft_p50_ms": {
+      "mean": 50.66141500003596,
+      "min": 50.66141500003596,
+      "max": 50.66141500003596,
+      "spread_pct": 0.0,
+      "n_rounds": 1
+    },
+    "ttft_p95_ms": {
+      "mean": 655.4371319999746,
+      "min": 655.4371319999746,
+      "max": 655.4371319999746,
+      "spread_pct": 0.0,
+      "n_rounds": 1
+    },
+    "total_p50_ms": {
+      "mean": 13640.641173000005,
+      "min": 13640.641173000005,
+      "max": 13640.641173000005,
+      "spread_pct": 0.0,
+      "n_rounds": 1
+    },
+    "total_p95_ms": {
+      "mean": 39070.06001100001,
+      "min": 39070.06001100001,
+      "max": 39070.06001100001,
+      "spread_pct": 0.0,
+      "n_rounds": 1
+    },
+    "tpot_server_ms": {
+      "mean": 12.160990390012646,
+      "min": 12.160990390012646,
+      "max": 12.160990390012646,
+      "spread_pct": 0.0,
+      "n_rounds": 1
+    },
+    "decode_tokens_per_s": {
+      "mean": 80.98429870926583,
+      "min": 80.98429870926583,
+      "max": 80.98429870926583,
+      "spread_pct": 0.0,
+      "n_rounds": 1
+    },
+    "requests_per_s": {
+      "mean": 0.06104520481979162,
+      "min": 0.06104520481979162,
+      "max": 0.06104520481979162,
+      "spread_pct": 0.0,
+      "n_rounds": 1
+    },
+    "wall_clock_s": {
+      "mean": 163.81303051600008,
+      "min": 163.81303051600008,
+      "max": 163.81303051600008,
+      "spread_pct": 0.0,
+      "n_rounds": 1
+    }
+  },
+  "gpu": {
+    "samples": 156,
+    "csv_path": "/mnt/d/albeni/ANTLab-Infra-Tasks/Basic Task/development/results/gpu/R20261016-131155-opt_final-c1.csv",
+    "mem_used_mib_max": 10371.0,
+    "mem_used_mib_min": 10305.0,
+    "util_pct_mean": 91.22435897435898,
+    "temp_c_max": 78.0,
+    "power_w_max": 137.99
+  },
+  "finished_at": "2026-10-16T13:14:38.977+08:00"
+}
