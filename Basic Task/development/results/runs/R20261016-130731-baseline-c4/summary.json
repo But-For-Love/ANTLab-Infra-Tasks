@@ -1,0 +1,253 @@
+{
+  "run_id": "R20261016-130731-baseline-c4",
+  "service_config": "baseline",
+  "load_id": "bench_c4",
+  "concurrency": 4,
+  "repeats": 3,
+  "output_limit": 192,
+  "overall": {
+    "total_requests": 30,
+    "by_status": {
+      "success": 30
+    },
+    "success": 30,
+    "success_rate": 1.0,
+    "retried_requests": 0,
+    "ttft_ms": {
+      "mean": 779.2999966666684,
+      "median": 633.2187820000001,
+      "p95": 2271.713869999985,
+      "min": 46.16642999999954,
+      "max": 2284.708359999996
+    },
+    "total_ms": {
+      "mean": 5344.595694600002,
+      "median": 4675.448154999998,
+      "p95": 7611.061413999977
+    },
+    "tpot_server_ms": {
+      "mean": 24.04583998078662,
+      "median": 23.463875
+    },
+    "tpot_client_ms": {
+      "mean": 24.17549791226462,
+      "median": 23.591476481675397
+    },
+    "tokens": {
+      "prompt_total": 36690,
+      "cached_total": 1861,
+      "output_total": 5678,
+      "output_mean": 189.26666666666668
+    },
+    "throughput": {
+      "decode_tokens_per_s": 41.46128525471596,
+      "requests_per_s": 0.6665925297268275,
+      "wall_tokens_per_s": 126.16374612629754
+    },
+    "wall_clock_s": 45.00500479999998
+  },
+  "rounds": [
+    {
+      "total_requests": 10,
+      "by_status": {
+        "success": 10
+      },
+      "success": 10,
+      "success_rate": 1.0,
+      "retried_requests": 0,
+      "ttft_ms": {
+        "mean": 752.0977033999998,
+        "median": 633.2187820000001,
+        "p95": 2269.562778000008,
+        "min": 47.662736999996014,
+        "max": 2269.562778000008
+      },
+      "total_ms": {
+        "mean": 5382.703613600003,
+        "median": 4721.3117050000055,
+        "p95": 7621.6047210000115
+      },
+      "tpot_server_ms": {
+        "mean": 24.359101562499998,
+        "median": 23.463875
+      },
+      "tpot_client_ms": {
+        "mean": 24.490621923547685,
+        "median": 23.591476481675397
+      },
+      "tokens": {
+        "prompt_total": 12230,
+        "cached_total": 621,
+        "output_total": 1896,
+        "output_mean": 189.6
+      },
+      "throughput": {
+        "decode_tokens_per_s": 40.94914591226015,
+        "requests_per_s": 0.6650604116520107,
+        "wall_tokens_per_s": 126.09545404922123
+      },
+      "wall_clock_s": 15.036228025,
+      "round": 1
+    },
+    {
+      "total_requests": 10,
+      "by_status": {
+        "success": 10
+      },
+      "success": 10,
+      "success_rate": 1.0,
+      "retried_requests": 0,
+      "ttft_ms": {
+        "mean": 747.373425699999,
+        "median": 630.6521169999826,
+        "p95": 2271.713869999985,
+        "min": 46.16642999999954,
+        "max": 2271.713869999985
+      },
+      "total_ms": {
+        "mean": 5361.324575399999,
+        "median": 4675.4010880000005,
+        "p95": 7611.061413999977
+      },
+      "tpot_server_ms": {
+        "mean": 24.268442931547618,
+        "median": 23.308343750000002
+      },
+      "tpot_client_ms": {
+        "mean": 24.39939858617111,
+        "median": 23.433334727748782
+      },
+      "tokens": {
+        "prompt_total": 12230,
+        "cached_total": 620,
+        "output_total": 1896,
+        "output_mean": 189.6
+      },
+      "throughput": {
+        "decode_tokens_per_s": 41.09683730574944,
+        "requests_per_s": 0.6672093563421374,
+        "wall_tokens_per_s": 126.50289396246924
+      },
+      "wall_clock_s": 14.987799413999994,
+      "round": 2
+    },
+    {
+      "total_requests": 10,
+      "by_status": {
+        "success": 10
+      },
+      "success": 10,
+      "success_rate": 1.0,
+      "retried_requests": 0,
+      "ttft_ms": {
+        "mean": 838.4288609000066,
+        "median": 626.616365000018,
+        "p95": 2284.708359999996,
+        "min": 128.91400600000225,
+        "max": 2284.708359999996
+      },
+      "total_ms": {
+        "mean": 5289.758894800005,
+        "median": 4639.779677999996,
+        "p95": 7279.553558000003
+      },
+      "tpot_server_ms": {
+        "mean": 23.509975448312236,
+        "median": 23.489619791666666
+      },
+      "tpot_client_ms": {
+        "mean": 23.636473227075054,
+        "median": 23.61462318848167
+      },
+      "tokens": {
+        "prompt_total": 12230,
+        "cached_total": 620,
+        "output_total": 1886,
+        "output_mean": 188.6
+      },
+      "throughput": {
+        "decode_tokens_per_s": 42.371773263653715,
+        "requests_per_s": 0.667513190830461,
+        "wall_tokens_per_s": 125.89298779062494
+      },
+      "wall_clock_s": 14.980977360999987,
+      "round": 3
+    }
+  ],
+  "aggregate": {
+    "rounds": 3,
+    "success_rate": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "spread_pct": 0.0,
+      "n_rounds": 3
+    },
+    "ttft_p50_ms": {
+      "mean": 630.1624213333336,
+      "min": 626.616365000018,
+      "max": 633.2187820000001,
+      "spread_pct": 1.0477325807547087,
+      "n_rounds": 3
+    },
+    "ttft_p95_ms": {
+      "mean": 2275.3283359999964,
+      "min": 2269.562778000008,
+      "max": 2284.708359999996,
+      "spread_pct": 0.6656438000773814,
+      "n_rounds": 3
+    },
+    "total_p50_ms": {
+      "mean": 4678.830823666667,
+      "min": 4639.779677999996,
+      "max": 4721.3117050000055,
+      "spread_pct": 1.7425726655385876,
+      "n_rounds": 3
+    },
+    "total_p95_ms": {
+      "mean": 7504.073230999998,
+      "min": 7279.553558000003,
+      "max": 7621.6047210000115,
+      "spread_pct": 4.558206622864025,
+      "n_rounds": 3
+    },
+    "tpot_server_ms": {
+      "mean": 24.04583998078662,
+      "min": 23.509975448312236,
+      "max": 24.359101562499998,
+      "spread_pct": 3.5312807324104285,
+      "n_rounds": 3
+    },
+    "decode_tokens_per_s": {
+      "mean": 41.47258549388777,
+      "min": 40.94914591226015,
+      "max": 42.371773263653715,
+      "spread_pct": 3.430283727073712,
+      "n_rounds": 3
+    },
+    "requests_per_s": {
+      "mean": 0.666594319608203,
+      "min": 0.6650604116520107,
+      "max": 0.667513190830461,
+      "spread_pct": 0.36795680765656236,
+      "n_rounds": 3
+    },
+    "wall_clock_s": {
+      "mean": 15.00166826666666,
+      "min": 14.980977360999987,
+      "max": 15.036228025,
+      "spread_pct": 0.36829679884855765,
+      "n_rounds": 3
+    }
+  },
+  "gpu": {
+    "samples": 47,
+    "csv_path": "/mnt/d/albeni/ANTLab-Infra-Tasks/Basic Task/development/results/gpu/R20261016-130731-baseline-c4.csv",
+    "mem_used_mib_max": 10474.0,
+    "mem_used_mib_min": 10466.0,
+    "util_pct_mean": 82.95744680851064,
+    "temp_c_max": 78.0,
+    "power_w_max": 145.32
+  },
+  "finished_at": "2026-10-16T13:08:20.911+08:00"
+}
